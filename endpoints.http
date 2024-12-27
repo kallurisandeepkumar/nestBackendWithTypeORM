@@ -27,3 +27,8 @@ Content-Type: application/json
   "assigneeId": "member1",
   "status": "TODO"
 }
+
+### Get task by assignee
+GET http://localhost:3000/tasks/assignee/member1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwic3ViIjoxLCJpYXQiOjE3MzUyNzQyNTUsImV4cCI6MTczNTI3Nzg1NX0.9CjapdZGOuJTVZi7ogolI0tw2OsgINtBJ3CAgvYYBJs
+
