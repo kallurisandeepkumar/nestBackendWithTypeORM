@@ -1,0 +1,29 @@
+### Login Request
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@example.com",
+  "password": "admin123"
+}
+
+### Create Team Request
+POST http://localhost:3000/teams
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwic3ViIjoxLCJpYXQiOjE3MzUyNzQyNTUsImV4cCI6MTczNTI3Nzg1NX0.9CjapdZGOuJTVZi7ogolI0tw2OsgINtBJ3CAgvYYBJs
+Content-Type: application/json
+
+{
+  "name": "Development Team",
+  "memberIds": ["member1", "member2"]
+}
+### create task request
+POST http://localhost:3000/tasks
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwic3ViIjoxLCJpYXQiOjE3MzUyNzQyNTUsImV4cCI6MTczNTI3Nzg1NX0.9CjapdZGOuJTVZi7ogolI0tw2OsgINtBJ3CAgvYYBJs
+Content-Type: application/json
+
+{
+  "description": "Implement feature X",
+  "dueDate": "2024-01-01",
+  "assigneeId": "member1",
+  "status": "TODO"
+}
