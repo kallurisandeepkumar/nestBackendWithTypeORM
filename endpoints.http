@@ -7,37 +7,7 @@ Content-Type: application/json
     "email": "admin@example.com",
     "password": "admin123"
 }
-###Tasks Endpoints
-###Create Task
 
-POST http://localhost:3000/tasks
-Authorization: Bearer <your-jwt-token>
-Content-Type: application/json
-
-{
-    "description": "Implement feature X",
-    "dueDate": "2024-01-01",
-    "assigneeId": "member1",
-    "status": "TODO"
-}
-###Get All Tasks
-
-GET http://localhost:3000/tasks
-Authorization: Bearer <your-jwt-token>
-###Get Tasks by Assignee
-
-GET http://localhost:3000/tasks/assignee/member1
-Authorization: Bearer <your-jwt-token>
-###Update Task
-
-PUT http://localhost:3000/tasks/:taskId
-Authorization: Bearer <your-jwt-token>
-Content-Type: application/json
-
-{
-    "description": "Updated description",
-    "status": "IN_PROGRESS"
-}
 ###Teams Endpoints
 ###Create Team
 
@@ -49,10 +19,14 @@ Content-Type: application/json
     "name": "Development Team",
     "memberIds": ["member1", "member2"]
 }
+
+
 ###Get All Teams
 
 GET http://localhost:3000/teams
 Authorization: Bearer <your-jwt-token>
+
+
 ###Update Team
 
 PUT http://localhost:3000/teams/:teamId
@@ -63,7 +37,48 @@ Content-Type: application/json
     "name": "Updated Team Name",
     "memberIds": ["member1", "member2", "member3"]
 }
+
+
 ###Add Team Member
 
 POST http://localhost:3000/teams/:teamId/members/:memberId
 Authorization: Bearer <your-jwt-token>
+
+
+###Tasks Endpoints
+###Create Task
+
+POST http://localhost:3000/tasks
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwic3ViIjoxLCJpYXQiOjE3MzU1Mjg2MDQsImV4cCI6MTczNTUzMjIwNH0.UKFyLyA9UZrnsz1VIzrkcWxAxKM-PNuOpULRejtiUc4
+Content-Type: application/json
+
+{
+    "description": "Implement feature X",
+    "dueDate": "2024-01-01",
+    "assigneeId": "member1",
+    "status": "TODO"
+}
+
+
+###Get All Tasks
+
+GET http://localhost:3000/tasks
+Authorization: Bearer <your-jwt-token>
+
+
+###Get Tasks by Assignee
+
+GET http://localhost:3000/tasks/assignee/member1
+Authorization: Bearer <your-jwt-token>
+
+
+###Update Task
+
+PUT http://localhost:3000/tasks/:taskId
+Authorization: Bearer <your-jwt-token>
+Content-Type: application/json
+
+{
+    "description": "Updated description",
+    "status": "IN_PROGRESS"
+}
