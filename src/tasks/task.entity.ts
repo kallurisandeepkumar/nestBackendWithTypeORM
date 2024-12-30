@@ -12,7 +12,7 @@ export class Task {
   @Column()
   dueDate: Date;
 
-  @Column(() => Date)
+  @Column()
   assigneeId: string;
 
   @Column()

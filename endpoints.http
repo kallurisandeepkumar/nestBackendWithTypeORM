@@ -12,12 +12,12 @@ Content-Type: application/json
 ###Create Team
 
 POST http://localhost:3000/teams
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwic3ViIjoxLCJpYXQiOjE3MzU1NDkwODYsImV4cCI6MTczNTU1MjY4Nn0.8GBiHN4OKyVlbS7L3BH8Cf-nlhOR_-qb-M2RCqxIHmA
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwic3ViIjoxLCJpYXQiOjE3MzU1NTMzNTYsImV4cCI6MTczNTU1Njk1Nn0.Qb6pP2EGClvxY43-zrO86TvSi30zOE_ancfuu1z7i8o
 Content-Type: application/json
 
 {
-    "name": "Development Team",
-    "memberIds": ["member1", "member2"]
+    "name": "frontendTeam",
+    "memberIds": ["sandeep", "sandhya"]
 }
 
 
@@ -49,13 +49,13 @@ Authorization: Bearer <your-jwt-token>
 ###Create Task
 
 POST http://localhost:3000/tasks
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwic3ViIjoxLCJpYXQiOjE3MzU1NDkwODYsImV4cCI6MTczNTU1MjY4Nn0.8GBiHN4OKyVlbS7L3BH8Cf-nlhOR_-qb-M2RCqxIHmA
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwic3ViIjoxLCJpYXQiOjE3MzU1NTMzNTYsImV4cCI6MTczNTU1Njk1Nn0.Qb6pP2EGClvxY43-zrO86TvSi30zOE_ancfuu1z7i8o
 Content-Type: application/json
 
 {
     "description": "Implement feature X",
     "dueDate": "2025-01-01T00:00:00.000Z",
-    "assigneeId": "member1",
+    "assigneeId": "sandhya",
     "status": "TODO"
 }
 
@@ -63,13 +63,13 @@ Content-Type: application/json
 ###Get All Tasks
 
 GET http://localhost:3000/tasks
-Authorization: Bearer <your-jwt-token>
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwic3ViIjoxLCJpYXQiOjE3MzU1NTMzNTYsImV4cCI6MTczNTU1Njk1Nn0.Qb6pP2EGClvxY43-zrO86TvSi30zOE_ancfuu1z7i8o
 
 
 ###Get Tasks by Assignee
 
-GET http://localhost:3000/tasks/assignee/member1
-Authorization: Bearer <your-jwt-token>
+GET http://localhost:3000/tasks/assignee/sandhya
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwic3ViIjoxLCJpYXQiOjE3MzU1NTMzNTYsImV4cCI6MTczNTU1Njk1Nn0.Qb6pP2EGClvxY43-zrO86TvSi30zOE_ancfuu1z7i8o
 
 
 ###Update Task
