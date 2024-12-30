@@ -1,29 +1,79 @@
-### Login Request
+###Authentication
+
 POST http://localhost:3000/auth/login
 Content-Type: application/json
 
 {
-  "email": "admin@example.com",
-  "password": "admin123"
+    "email": "admin@example.com",
+    "password": "admin123"
 }
+###Tasks Endpoints
+###Create Task
 
-### Create Team Request
-POST http://localhost:3000/teams
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwic3ViIjoxLCJpYXQiOjE3MzUyNzQyNTUsImV4cCI6MTczNTI3Nzg1NX0.9CjapdZGOuJTVZi7ogolI0tw2OsgINtBJ3CAgvYYBJs
-Content-Type: application/json
-
-{
-  "name": "Development Team",
-  "memberIds": ["member1", "member2"]
-}
-### create task request
 POST http://localhost:3000/tasks
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwic3ViIjoxLCJpYXQiOjE3MzUyNzQyNTUsImV4cCI6MTczNTI3Nzg1NX0.9CjapdZGOuJTVZi7ogolI0tw2OsgINtBJ3CAgvYYBJs
+Authorization: Bearer <your-jwt-token>
 Content-Type: application/json
 
 {
-  "description": "Implement feature X",
-  "dueDate": "2024-01-01",
-  "assigneeId": "member1",
-  "status": "TODO"
+    "description": "Implement feature X",
+    "dueDate": "2024-01-01",
+    "assigneeId": "member1",
+    "status": "TODO"
 }
+
+###Get All Tasks
+
+GET http://localhost:3000/tasks
+Authorization: Bearer <your-jwt-token>
+
+
+###Get Tasks by Assignee
+
+GET http://localhost:3000/tasks/assignee/member1
+Authorization: Bearer <your-jwt-token>
+
+
+###Update Task
+
+PUT http://localhost:3000/tasks/:taskId
+Authorization: Bearer <your-jwt-token>
+Content-Type: application/json
+
+{
+    "description": "Updated description",
+    "status": "IN_PROGRESS"
+}
+###Teams Endpoints
+###Create Team
+
+POST http://localhost:3000/teams
+Authorization: Bearer <your-jwt-token>
+Content-Type: application/json
+
+{
+    "name": "Development Team",
+    "memberIds": ["member1", "member2"]
+}
+
+
+###Get All Teams
+
+GET http://localhost:3000/teams
+Authorization: Bearer <your-jwt-token>
+
+###Update Team
+
+PUT http://localhost:3000/teams/:teamId
+Authorization: Bearer <your-jwt-token>
+Content-Type: application/json
+
+{
+    "name": "Updated Team Name",
+    "memberIds": ["member1", "member2", "member3"]
+}
+
+
+###Add Team Member
+
+POST http://localhost:3000/teams/:teamId/members/:memberId
+Authorization: Bearer <your-jwt-token>
