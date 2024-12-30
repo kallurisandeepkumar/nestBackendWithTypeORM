@@ -12,7 +12,7 @@ Content-Type: application/json
 ###Create Team
 
 POST http://localhost:3000/teams
-Authorization: Bearer <your-jwt-token>
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwic3ViIjoxLCJpYXQiOjE3MzU1NDkwODYsImV4cCI6MTczNTU1MjY4Nn0.8GBiHN4OKyVlbS7L3BH8Cf-nlhOR_-qb-M2RCqxIHmA
 Content-Type: application/json
 
 {
@@ -49,12 +49,12 @@ Authorization: Bearer <your-jwt-token>
 ###Create Task
 
 POST http://localhost:3000/tasks
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwic3ViIjoxLCJpYXQiOjE3MzU1Mjg2MDQsImV4cCI6MTczNTUzMjIwNH0.UKFyLyA9UZrnsz1VIzrkcWxAxKM-PNuOpULRejtiUc4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwic3ViIjoxLCJpYXQiOjE3MzU1NDkwODYsImV4cCI6MTczNTU1MjY4Nn0.8GBiHN4OKyVlbS7L3BH8Cf-nlhOR_-qb-M2RCqxIHmA
 Content-Type: application/json
 
 {
     "description": "Implement feature X",
-    "dueDate": "2024-01-01",
+    "dueDate": "2025-01-01T00:00:00.000Z",
     "assigneeId": "member1",
     "status": "TODO"
 }

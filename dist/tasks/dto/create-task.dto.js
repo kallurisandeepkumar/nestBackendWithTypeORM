@@ -22,7 +22,7 @@ __decorate([
 ], CreateTaskDto.prototype, "description", void 0);
 __decorate([
     (0, class_validator_1.IsNotEmpty)(),
-    (0, class_validator_1.IsDate)(),
+    (0, class_validator_1.IsString)(),
     __metadata("design:type", Date)
 ], CreateTaskDto.prototype, "dueDate", void 0);
 __decorate([

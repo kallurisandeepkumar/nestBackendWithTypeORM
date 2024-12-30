@@ -7,7 +7,7 @@ export class CreateTaskDto {
   description: string;
 
   @IsNotEmpty()
-  @IsDate()
+  @IsString()
   dueDate: Date;
 
   @IsNotEmpty()

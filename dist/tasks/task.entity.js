@@ -28,7 +28,7 @@ __decorate([
     __metadata("design:type", Date)
 ], Task.prototype, "dueDate", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)(() => Date),
     __metadata("design:type", String)
 ], Task.prototype, "assigneeId", void 0);
 __decorate([
